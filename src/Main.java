@@ -26,13 +26,23 @@ public class Main {
         ingredientesList.add("jiló");
         ingredientesList.add("ovo");
 
+        Hamburguer hamburguer = new Hamburguer(ingredientesList, 19);
+
+        System.out.println("Antes de tirar: " + hamburguer.getIngredientes());
+        hamburguer.tirarIngrediente("jiló");
+        System.out.println("Depois de tirar: " + hamburguer.getIngredientes());
+
+        //Cliente cliente = new Cliente("Ketlyn", "Luana");
+        //Preco
+
+
         //remover da Lista
         //ingredienteList.remover("jiló");
         //Sytem.out.println(ingredienteList);
 
         //varrer Lista ( COM WHILE
         //Integer cont = 0;
-        //Integer cont_ing= 0;
+        //Inter cont_ing= 0;
         //while (cont < 6){
         //     cont_ing += 1;
         //     System.out.println(ingredienteList.get(cont));
@@ -40,7 +50,8 @@ public class Main {
         //}
         //System.out.println("A quantidade de ingredientes é: " + cont_i");
 
-        //Varrer Lista COM FOR
+        //Varrer Lista com
+        //"1"for
         int cont_ing = 0;
         for(int cont = 0 ; cont<6 ;cont++){
             cont_ing += 1;
@@ -48,10 +59,12 @@ public class Main {
         }
 
         Cliente cliente = new Cliente("Kelyn", "Luana");
-        Hamburguer simples = new Hamburguer(ingredientesList);
+        Hamburguer simples = new Hamburguer(ingredientesList,20);
+
+        System.out.println(simples.getPreco());
 
         Pedido pedido1 = new Pedido(cliente, simples);
 
-        System.out.println(hamburguer.getingredientes());
+        System.out.println(simples.getingredientes());
     }
 }
