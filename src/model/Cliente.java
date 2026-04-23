@@ -1,43 +1,53 @@
-package model;
+package Model;
 
 public class Cliente {
 
-    private String Nome;
-    private String Sobrenome;
+    private String nome;
+    private String sobrenome;
+    private String cliente;
 
-
-    public Cliente(String Nome, String Sobrenome) {
-        Sobrenome = Sobrenome;
-        Nome = Nome;
+    public Cliente(String cliente, String sobrenome, String nome) {
+        this.cliente = cliente;
+        this.sobrenome = sobrenome;
+        this.nome = nome;
     }
 
-    public void Hello() {
-        System.out.println("Olá Mundo!");
+    public String getCliente() {
+        return cliente;
     }
 
-    public void Bye() {
-        System.out.println("Bye Bye Bye!");
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
 
-    public String getNomeInteiro(){
-        return Nome + " " + Sobrenome;
+    public Cliente(String nome, String sobrenome) {
+        this.sobrenome = sobrenome;
+        this.nome = nome;
+    }
+
+    public void Hello(){
+        System.out.println("Olá Mundo");
+    }
+    public void Bye(){
+        System.out.println("Bye Bye baby");
+    }
+    public String getNomeInteiro() {
+        return nome + " " + sobrenome;
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
     public String getSobrenome() {
-        return Sobrenome;
+        return sobrenome;
     }
 
     public void setSobrenome(String sobrenome) {
-        Sobrenome = sobrenome;
+        this.sobrenome = sobrenome;
     }
 }
-
-
